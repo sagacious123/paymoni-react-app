@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import Header from './components/Header'
+import MultiStepForm from './components/MultiStepForm'
 
 function App() {
+
+  const [getStep, setGetStep] = useState()
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    axios.get("http://data.fixer.io/api/latest?access_key=e37728b203ebd832f0eb176c1f3b796f")
+    .then(res => console.log(res))
+  }, [])
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header width={width} />
+      <MultiStepForm setGetStep={setGetStep} setWidth={setWidth} />
     </div>
   );
 }
 
 export default App;
+
+
+// ACCESS KEY: e37728b203ebd832f0eb176c1f3b796f
