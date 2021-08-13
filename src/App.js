@@ -17,7 +17,7 @@ function App() {
   
   return (
     <div>
-      <Header width={width} />
+      <Header width={width} getStep={getStep} />
       <MultiStepForm setGetStep={setGetStep} setWidth={setWidth} />
     </div>
   );

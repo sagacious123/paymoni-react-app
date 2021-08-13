@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Stepper = ({ width }) => {
+const Stepper = ({ width, getStep }) => {
 
   console.log(width)
   const stepWrapper = {
@@ -23,8 +23,8 @@ const Stepper = ({ width }) => {
   }
 
   const stepperAfter = {
-    height: '6px',
-    width: '6px',
+    height: '7px',
+    width: '7px',
     borderRadius: '50%',
     backgroundColor: 'black',
     position: 'absolute',
@@ -45,10 +45,10 @@ const Stepper = ({ width }) => {
        <span style={stepperAfter}></span>
      </div>
      <div className="flex justify-between items-center w-full mt-3">
-       <span className="text-sm text-gray-500 relative -left-6">Amount</span>
-       <span className="text-sm text-gray-500 relative -left-4">Recipient</span>
-       <span className="text-sm text-gray-500 relative -left-2">Review</span>
-       <span className="text-sm text-gray-500 relative -right-3">Pay</span>
+       <span className={`text-sm relative -left-6 ${getStep === 0 ? "text-black font-semibold" : "text-gray-500"} ${getStep > 0 ? "text-indigo-700" : "text-gray-500"}`}>Amount</span>
+       <span className={`text-sm relative -left-4 ${getStep === 1 ? "text-black font-semibold" : "text-gray-500"} ${getStep > 1 ? "text-indigo-700" : "text-gray-500"}`}>Recipient</span>
+       <span className={`text-sm relative -left-2 ${getStep === 2 ? "text-black font-semibold" : "text-gray-500"} ${getStep > 2 ? "text-indigo-700" : "text-gray-500"}`}>Review</span>
+       <span className={`text-sm relative -right-3 ${getStep === 3 ? "text-black font-semibold" : "text-gray-500"}`}>Pay</span>
      </div>
     </div>
   )
