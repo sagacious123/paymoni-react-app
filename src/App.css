@@ -1,11 +1,11 @@
-/* .stepper::after {
+.result::before {
   content: '';
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  background-color: black;
+  height: 120%;
+  width: 3px;
+  background-color: rgb(226, 226, 226);
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-} */
+  z-index: -1;
+  left: 10px;
+  top: -22px;
+  
+}

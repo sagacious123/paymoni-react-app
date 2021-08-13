@@ -13,7 +13,7 @@ const AmountInput = ({
   cursor
 }) => {
   return (
-    <div className="w-full flex mb-4 relative">
+    <div className="w-full flex mb-4 relative z-10">
         <label 
           htmlFor={labelFor} 
           className="absolute text-gray-400 text-sm ml-4 mt-1 sm:mt-2">
