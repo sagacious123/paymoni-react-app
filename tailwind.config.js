@@ -1,11 +1,12 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
         'verydarkbg': '#202c37',
         'darkbg': '#2b3945',
+        'purpledarkbg': '#1b0829',
         'lighttext': '#111517',
         'lightbg': '#fafafa'
       },

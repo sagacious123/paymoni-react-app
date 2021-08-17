@@ -2,7 +2,7 @@ import React from 'react'
 
 const Review = ({ formData, setForm, navigation }) => {
   return (
-    <div className="bg-white py-8 px-5 md:p-8 w-11/12 max-w-lg m-auto mt-28 sm:mt-40 mb-16 lg:mt-16 rounded-md shadow-sm border border-gray-100">
+    <div className="bg-white dark:border-gray-500 dark:bg-gray-700 py-8 px-5 md:p-8 w-11/12 max-w-lg m-auto mt-28 sm:mt-40 mb-16 lg:mt-16 rounded-md shadow-sm border border-gray-100">
       <h1 className="text-indigo-800 text-lg font-bold mb-4">Review details of your transfer</h1>
 
       <div className="mb-6 pt-5 border-t border-gray-100 relative">

@@ -1,11 +1,11 @@
 .result::before {
   content: '';
   height: 120%;
-  width: 3px;
+  width: 2px;
   background-color: rgb(226, 226, 226);
   position: absolute;
   z-index: -1;
-  left: 10px;
+  left: 9px;
   top: -22px;
   
 }
