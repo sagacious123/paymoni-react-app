@@ -26,7 +26,7 @@ const Review = ({ formData, setForm, navigation }) => {
           <span className="text-sm">{`${formData.recipientName} gets`}</span> 
           <span className="font-bold text-gray-700 dark:text-gray-300 text-base">1,248.63 EUR</span>
         </div>
-          <span onClick={() => navigation.go(0)} className="py-2 px-3 mt-2 mb-7 text-sm rounded-full inline-block hover:bg-indigo-500 dark:hover:bg-indigo-400 hover:text-gray-100 dark:hover:text-white cursor-pointer border border-indigo-500 dark:border-indigo-400 bg-transparent text-indigo-700 dark:text-indigo-400 float-right relative"><i className="fa fa-pencil">p</i></span>
+          <span onClick={() => navigation.go(0)} className="py-2 px-3 mt-2 mb-7 text-sm rounded-full inline-block hover:bg-indigo-500 dark:hover:bg-indigo-400 hover:text-gray-100 dark:hover:text-white cursor-pointer border border-indigo-500 dark:border-indigo-400 bg-transparent text-indigo-700 dark:text-indigo-400 float-right relative"><i className="fa fa-pencil"></i></span>
       </div>
       <div className="pt-5 border-t border-gray-100 dark:border-gray-500 relative clear-both">
         <div className="text-gray-400 mb-3 flex items-center justify-between">
