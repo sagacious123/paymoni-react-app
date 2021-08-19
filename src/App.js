@@ -17,7 +17,7 @@ function App() {
   
   
   return (
-    <div className={`bg-gray-50 pb-32 ${darkMode && "dark bg-verydarkbg"}`}>
+    <div className={`bg-gray-50 pb-40 ${darkMode && "dark bg-verydarkbg"}`}>
       <Header width={width} getStep={getStep} setDarkMode={setDarkMode} darkMode={darkMode} />
       <MultiStepForm setGetStep={setGetStep} setWidth={setWidth} />
     </div>

@@ -16,7 +16,12 @@ const Recipient = ({ formData, setForm, navigation, disable, setDisable }) => {
   }
 
   return (
-    <div className="bg-white py-8 px-5 md:p-8 w-11/12 max-w-lg m-auto mt-28 sm:mt-40 mb-16 lg:mt-16 rounded-md shadow-sm border border-gray-100 dark:border-gray-500 dark:bg-gray-700">
+    <form method="POST" className="bg-white py-8 px-5 md:p-8 w-11/12 max-w-lg m-auto mt-28 sm:mt-40 mb-16 lg:mt-16 rounded-md shadow-sm border border-gray-100 dark:border-gray-500 dark:bg-gray-700" 
+      onSubmit={(e) => {
+        e.preventDefault();
+        navigation.next();
+      }}
+    >
       <h1 className="text-indigo-800 dark:text-indigo-500 text-lg font-bold">Your Recipient</h1>
       <h2 className="text-gray-400 mb-3 dark:text-gray-300">Who are you sending money to?</h2>
       <div className="border-t border-gray-100 dark:border-gray-400 pt-5 pb-4 mb-2">
@@ -115,9 +120,11 @@ const Recipient = ({ formData, setForm, navigation, disable, setDisable }) => {
         }
       </div>
       <div className="mt-6">
-        <input type="button" value="Continue" onClick={() => navigation.next()} className={`bg-indigo-600  border-2 border-indigo-700 dark:border-indigo-500 py-3 px-3 w-full rounded-md text-white cursor-pointer transition-all duration-300 ${disable ? "opacity-50 hover:bg-indigo-700 hover:text-white cursor-not-allowed" : "hover:bg-transparent hover:text-indigo-700 dark:hover:text-indigo-500"}`} disabled={disable} />
+        <input type="submit" value="Continue" 
+           
+          className={`bg-indigo-600  border-2 border-indigo-700 dark:border-indigo-500 py-3 px-3 w-full rounded-md text-white cursor-pointer transition-all duration-300 ${disable ? "opacity-50 hover:bg-indigo-700 dark:hover:bg-indigo-600 hover:text-white cursor-not-allowed" : "hover:bg-transparent hover:text-indigo-700 dark:hover:text-indigo-500"}`} disabled={disable} />
       </div>
-    </div>
+    </form>
   )
 }
 

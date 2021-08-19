@@ -23,6 +23,8 @@ const steps = [
 const MultiStepForm = ({ setGetStep, setWidth }) => {
 
   const [disable, setDisable] = useState(true)
+  const [country1, setCountry1] =  useState([])
+  const [country2, setCountry2] =  useState([])
 
   const [formData, setForm] = useForm(defaultData);
   const {step, index, navigation} = useStep({
@@ -36,9 +38,16 @@ const MultiStepForm = ({ setGetStep, setWidth }) => {
   //   setDisable(true);
   // }
 
-  const props = { formData, setForm, navigation, disable, setDisable }
+
+  const transferFee = 0.369/100 * formData.sentAmount;
+  const transferAmount = formData.sentAmount - transferFee;
+  console.log(transferFee)
+
+
+  const props = { formData, setForm, navigation, disable, setDisable, transferFee, transferAmount }
 
   setGetStep(index); 
+
 
   let percentage = index/steps.length * 100
   setWidth(percentage);

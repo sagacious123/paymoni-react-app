@@ -7,6 +7,7 @@ const AmountInput = ({
   inputValue,
   inputChange,
   inputName,
+  selectValue,
   selectName,
   selectId,
   readOnly,
@@ -30,8 +31,8 @@ const AmountInput = ({
         <select 
           name={selectName} 
           id={selectId} 
-          className="w-3/12 py-3 sm:py-4 px-2 bg-gray-100 dark:bg-gray-300 rounded-r-md cursor-pointer focus:outline-none focus:ring-0">
-          <option value="">NGN</option>
+          className="w-3/12 py-3 sm:py-4 px-2 dark:text-gray-200 bg-gray-100 dark:bg-gray-500 rounded-r-md cursor-pointer focus:outline-none focus:ring-0">
+          <option value={selectValue}>{selectValue}</option>
         </select>
       </div>
   )
