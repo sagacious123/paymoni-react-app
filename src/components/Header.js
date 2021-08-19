@@ -20,6 +20,3 @@ const Header = ({ width, getStep, setDarkMode, darkMode }) => {
 }
 
 export default Header
-
-
-// my github Personal Access Token = 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
